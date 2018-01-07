@@ -17,4 +17,4 @@ services:
     environment:
       - NODE_ENV=development
     ports:
-      - '8001:8001'
+      - '3000:3000'

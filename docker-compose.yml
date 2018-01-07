@@ -10,7 +10,7 @@ services:
       - client
 
   frontend:
-    build: 'frontend/.'
+    image: node:9.3
     volumes:
       - './frontend/:/code'
     command: 'yarn watch'

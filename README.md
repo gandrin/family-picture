@@ -1,2 +1,2 @@
-# family-picture
+# AniCrush
 Online puzzle game

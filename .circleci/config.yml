@@ -1,13 +1,18 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/familyPicture/frontend
     docker:
       - image: node:9.3
     steps:
-      - checkout
+      - checkout:
+          path: ~/familyPicture
       - run:
           name: Start at
           command: date
+      - run:
+          name: Install dependencies
+          command: yarn
       - run:
           name: Tests should pass
           command: yarn test

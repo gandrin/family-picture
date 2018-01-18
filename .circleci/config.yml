@@ -6,8 +6,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Greeting
-          command: echo Hello, world.
+          name: Start at
+          command: date
       - run:
-          name: Print the Current Time
+          name: Tests should pass
+          command: yarn test
+      - run:
+          name: Done at
           command: date

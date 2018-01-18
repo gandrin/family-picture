@@ -7,13 +7,13 @@ services:
     ports:
       - '80:80'
     depends_on:
-      - client
+      - frontend
 
   frontend:
-    image: node:9.3
+    build: './frontend'
     volumes:
       - './frontend/:/code'
-    command: 'yarn watch'
+    command: 'yarn start'
     environment:
       - NODE_ENV=development
     ports:

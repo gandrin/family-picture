@@ -14,5 +14,5 @@ export default class PuzzleTile extends Component {
 }
 
 PuzzleTile.propTypes = {
-  content: PropTypes.string.isRequired,
+  content: PropTypes.number.isRequired,
 }

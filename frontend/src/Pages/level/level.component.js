@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './level.style.css';
 
-import Puzzle from '../../Components/level';
+import Puzzle from '../../Components/level/puzzle';
 
 const levelConfiguration = [
   [1, 2, 3],

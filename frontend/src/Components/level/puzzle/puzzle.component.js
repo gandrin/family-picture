@@ -9,13 +9,18 @@ export default class Puzzle extends Component {
     return (
       <div className="Puzzle">
         {
-          this.props.level.map((puzzleLine) => {
+          this.props.level.map((puzzleLine, index) => {
             return (
-              <div className="PuzzleLine">
+              <div key={index} className="PuzzleLine">
                 {
-                  puzzleLine.map(() => {
+                  puzzleLine.map((tileContent) => {
                     return (
-                      <PuzzleTile />
+                      <div className="PuzzleTile">
+                        <PuzzleTile
+                          content={tileContent}
+                          key={tileContent}
+                        />
+                      </div>
                     )
                   })
                 }
@@ -23,7 +28,6 @@ export default class Puzzle extends Component {
             )
           })
         }
-        <PuzzleTile content={} />
       </div>
     );
   }

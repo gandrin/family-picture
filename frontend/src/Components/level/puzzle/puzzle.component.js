@@ -13,11 +13,11 @@ export default class Puzzle extends Component {
             return (
               <div key={index} className="PuzzleLine">
                 {
-                  puzzleLine.map((tileContent) => {
+                  puzzleLine.map((tile) => {
                     return (
                       <PuzzleTile
-                        content={tileContent}
-                        key={tileContent}
+                        {...tile}
+                        key={tile.id}
                       />
                     )
                   })

@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './level.style.css';
 
 import Puzzle from '../../Components/level/puzzle';
 
-const levelConfiguration = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-];
-
 export default class Level extends Component {
+
+  componentDidMount() {
+    this.props.initializePuzzle(1);
+  }
+
   render() {
     return (
       <div className="Level">
-        <Puzzle level={levelConfiguration} />
+        <Puzzle />
       </div>
     );
   }
+}
+
+Level.propTypes = {
+  initializePuzzle: PropTypes.func.isRequired,
 }

@@ -1,1 +1,1 @@
-export { default } from './puzzle.component';
+export { default } from './puzzle.container';

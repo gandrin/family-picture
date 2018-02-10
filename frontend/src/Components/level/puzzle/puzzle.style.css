@@ -14,10 +14,10 @@
   margin-top: 20px;
 }
 
-.PuzzleTile {
+.PuzzleLine > * {
   flex: 1 1 auto;
 }
 
-.PuzzleTile + .PuzzleTile {
+.PuzzleLine > * + * {
   margin-left: 20px;
 }

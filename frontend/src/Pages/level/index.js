@@ -1,1 +1,1 @@
-export { default } from './level.component';
+export { default } from './level.container';

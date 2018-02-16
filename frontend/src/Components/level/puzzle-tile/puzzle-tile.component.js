@@ -8,7 +8,8 @@ export default class PuzzleTile extends Component {
     return (
       <div
         className="Tile"
-        onClick={this.props.onClick}
+        onClick={() => this.props.click(this.props.id)}
+        is-active={`${this.props.isActive}`}
       >
         {this.props.content}
       </div>
@@ -18,11 +19,12 @@ export default class PuzzleTile extends Component {
 
 PuzzleTile.defaultProps = {
   isActive: false,
-  onClick: () => {},
+  click: () => { }
 }
 
 PuzzleTile.propTypes = {
-  content: PropTypes.number,
+  content: PropTypes.any,
+  id: PropTypes.number,
   isActive: PropTypes.bool,
-  onClick: PropTypes.func,
+  click: PropTypes.func,
 }

@@ -1,1 +1,1 @@
-export { default } from './puzzle-tile.component.js';
+export { default } from './puzzle-tile.container.js';

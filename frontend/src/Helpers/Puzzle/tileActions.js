@@ -21,3 +21,22 @@ export const findTileById = (tileId, tiles) => {
   }
   return undefined;
 }
+
+/**
+ * Returns the list of currently active tiles in the puzzle
+ * @param {*} tiles 
+ */
+export const getActiveTiles = (tiles) => {
+  if (!Array.isArray(tiles)) {
+    throw new Error(`Expected Tiles to be a array received : ${typeof tiles}`);
+  }
+  let activeTiles = [];
+  for( const row of tiles) {
+    const activeTilesInRow = row.filter((tile) => {
+      return tile.isActive;
+    })
+    activeTiles = [ ...activeTiles, ...activeTilesInRow ];
+  }
+  console.log(activeTiles);
+  return activeTiles;
+}

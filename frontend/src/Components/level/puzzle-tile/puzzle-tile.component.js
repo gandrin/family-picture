@@ -11,7 +11,7 @@ export default class PuzzleTile extends Component {
         onClick={() => this.props.click(this.props.id)}
         is-active={`${this.props.isActive}`}
       >
-        {this.props.content}
+        {this.props.content} {this.props.id}
       </div>
     );
   }

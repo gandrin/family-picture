@@ -1,10 +1,10 @@
 import { connect } from 'react-redux'
-import { actions as PuzzleActions } from '../../../Reducers/puzzle'
+import { actions as PuzzleActions, getPuzzleFromState } from '../../../Reducers/puzzle'
 import Puzzle from './puzzle.component'
 
 const mapStateToProps = state => {
   return {
-    puzzle: state.puzzle,
+    puzzle: getPuzzleFromState(state.puzzle),
   }
 }
 

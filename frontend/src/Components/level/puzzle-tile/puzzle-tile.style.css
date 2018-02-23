@@ -4,6 +4,7 @@
   vertical-align: middle;
   text-align: center;
   background-color: aquamarine;
+  cursor: pointer;
 }
 
 .Tile[is-active=true] {

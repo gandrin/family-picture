@@ -1,13 +1,21 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/familyPicture/frontend
     docker:
-      - image: debian:stretch
+      - image: node:9.3
     steps:
-      - checkout
+      - checkout:
+          path: ~/familyPicture
       - run:
-          name: Greeting
-          command: echo Hello, world.
+          name: Start at
+          command: date
       - run:
-          name: Print the Current Time
+          name: Install dependencies
+          command: yarn
+      - run:
+          name: Tests should pass
+          command: yarn test
+      - run:
+          name: Done at
           command: date

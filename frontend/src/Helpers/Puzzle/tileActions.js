@@ -37,6 +37,5 @@ export const getActiveTiles = (tiles) => {
     })
     activeTiles = [ ...activeTiles, ...activeTilesInRow ];
   }
-  console.log(activeTiles);
   return activeTiles;
 }

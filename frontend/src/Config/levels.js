@@ -1,4 +1,4 @@
-import Content from './Content';
+import Default from './Content/Content/default';
 
 export const getLevelById = (levelId) => {
   if (!levelId || levelId <= 0) {
@@ -9,9 +9,9 @@ export const getLevelById = (levelId) => {
 
 export const levels = {
   1: [
-    [Content.DEFAULT, Content.DEFAULT, Content.DEFAULT],
-    [Content.DEFAULT, Content.DEFAULT, Content.DEFAULT],
-    [Content.DEFAULT, Content.DEFAULT, Content.DEFAULT],
+    [Default, Default, Default],
+    [Default, Default, Default],
+    [Default, Default, Default],
   ],
 }
 

@@ -34,7 +34,10 @@ export default function PuzzleReducer(state = defaultState, action = {}) {
     case constants.CLICK:
       const tileClicked = findTileById(action.tileId, getPuzzleFromState(state));
       const newPuzzleState = [...getPuzzleFromState(state)];
-      newPuzzleState[tileClicked.rowIndex][tileClicked.indexInRow] = Object.assign({ ...tileClicked}, { isActive: !tileClicked.isActive });
+      newPuzzleState[tileClicked.rowIndex][tileClicked.indexInRow] = Object.assign(
+        { ...tileClicked},
+        { isActive: !tileClicked.isActive }
+      );
       return {
         puzzle: newPuzzleState,
         availableActions: getAvailableActions(newPuzzleState)

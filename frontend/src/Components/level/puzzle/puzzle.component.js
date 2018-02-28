@@ -33,10 +33,8 @@ export default class Puzzle extends Component {
 
 Puzzle.defaultProps = {
   puzzle: [],
-  availableActions: []
 }
 
 Puzzle.propTypes = {
   puzzle: PropTypes.arrayOf(PropTypes.array),
-  availableActions: PropTypes.arrayOf(PropTypes.array),
 }

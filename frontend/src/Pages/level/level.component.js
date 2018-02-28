@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './level.style.css';
 
 import Puzzle from '../../Components/level/puzzle';
+import Actions from '../../Components/level/actions';
 
 export default class Level extends Component {
 
@@ -14,6 +15,7 @@ export default class Level extends Component {
     return (
       <div className="Level">
         <Puzzle />
+        <Actions />
       </div>
     );
   }

@@ -21,3 +21,11 @@ export const getAvailableActions = (puzzle) => {
   );
   return unique(availableActionsWithDoubles, 'identifier');
 }
+
+/**
+ *
+ * @param {*} puzzle
+ */
+export const isPuzzleFinished = (puzzle) => {
+  return false;
+};

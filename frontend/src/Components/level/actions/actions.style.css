@@ -1,0 +1,17 @@
+.Actions {
+  padding: 30px 10px 0px 10px;
+  text-align: center;
+}
+
+.Action {
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid rgb(224, 224, 224);
+  cursor: pointer;
+  display: inline-block;
+}
+
+.Action:hover {
+  background-color: rgb(245, 245, 245);
+  box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.5);
+}

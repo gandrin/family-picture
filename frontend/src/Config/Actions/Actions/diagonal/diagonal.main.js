@@ -1,9 +1,9 @@
-import adjacent from "../../Rules/adjacent";
+import diagonal from "../../Rules/diagonal";
 
 export default {
-  name: "Swap",
+  name: "Diago",
   targetsCount: 2,
-  targetsRules: [adjacent],
+  targetsRules: [diagonal],
   move: (puzzle, targets) => {
     const newPuzzle = [...puzzle];
     const tileA = { ...targets[0], isActive: false };

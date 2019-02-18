@@ -1,26 +1,27 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import './level.style.css';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import './level.style.css'
 
-import Puzzle from '../../Components/level/puzzle';
-import Actions from '../../Components/level/actions';
+import Puzzle from '../../Components/level/puzzle'
+import Actions from '../../Components/level/actions'
 
 export default class Level extends Component {
-
   componentDidMount() {
-    this.props.initializePuzzle(1);
+    this.props.initializePuzzle(1)
   }
 
   render() {
     return (
       <div className="Level">
-        <Puzzle />
+        <div className="Level-container">
+          <Puzzle />
+        </div>
         <Actions />
       </div>
-    );
+    )
   }
 }
 
 Level.propTypes = {
-  initializePuzzle: PropTypes.func.isRequired,
+  initializePuzzle: PropTypes.func.isRequired
 }

@@ -4,7 +4,7 @@ import Puzzle from './puzzle.component'
 
 const mapStateToProps = state => {
   return {
-    puzzle: getPuzzleFromState(state.puzzle),
+    puzzle: getPuzzleFromState(state.puzzle)
   }
 }
 

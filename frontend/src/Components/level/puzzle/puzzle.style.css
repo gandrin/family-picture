@@ -10,12 +10,12 @@
   justify-content: space-around;
 }
 
-.PuzzleLine + .PuzzleLine{
+.PuzzleLine + .PuzzleLine {
   margin-top: 20px;
 }
 
 .PuzzleLine > * {
-  flex: 1 1 auto;
+  flex: 1 1 0;
 }
 
 .PuzzleLine > * + * {

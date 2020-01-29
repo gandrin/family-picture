@@ -1,30 +1,30 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
-import './puzzle-tile.style.css';
+import './puzzle-tile.style.css'
 
 export default class PuzzleTile extends Component {
   render() {
     return (
       <div
         className="Tile"
-        onClick={() => this.props.click(this.props.id)}
+        onClick={() => this.props.click(this.props.tileId)}
         is-active={`${this.props.isActive}`}
       >
-        {this.props.content} {this.props.id}
+        {this.props.content} {this.props.tileId}
       </div>
-    );
+    )
   }
 }
 
 PuzzleTile.defaultProps = {
   isActive: false,
-  click: () => { }
+  click: () => {}
 }
 
 PuzzleTile.propTypes = {
   content: PropTypes.any,
-  id: PropTypes.number,
+  tileId: PropTypes.number,
   isActive: PropTypes.bool,
-  click: PropTypes.func,
+  click: PropTypes.func
 }

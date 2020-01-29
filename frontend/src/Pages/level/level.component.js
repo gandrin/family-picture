@@ -13,6 +13,7 @@ export default class Level extends Component {
   render() {
     return (
       <div className="Level">
+        {this.props.isFinished ? 'YEAAAAAH' : 'Nooot yet'}
         <div className="Level-container">
           <Puzzle />
         </div>
@@ -23,5 +24,6 @@ export default class Level extends Component {
 }
 
 Level.propTypes = {
-  initializePuzzle: PropTypes.func.isRequired
+  initializePuzzle: PropTypes.func.isRequired,
+  isFinished: PropTypes.bool.isRequired
 }
